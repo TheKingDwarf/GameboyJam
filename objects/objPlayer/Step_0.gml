@@ -8,6 +8,7 @@ switch (state) {
 		if (hAxis == 0) {
 			vx = approach(vx, 0, runDecel);
 			image_speed = 0;
+			image_index = 0;
 		} else {
 			vx = approach(vx, runSpeed*sign(hAxis), runAccel)
 			image_xscale = hAxis
@@ -30,8 +31,10 @@ switch (state) {
 	case PS.jump:
 		if (hAxis == 0) {
 			vx = approach(vx, 0, runDecel);
-		} else 
+		} else {
 			vx = approach(vx, runSpeed*sign(hAxis), runAccel)
+			image_xscale = sign(hAxis);	
+		}
 		if (instance_place(x,y-1,objSolid)) {
 			vy = 0;	
 		}
@@ -50,6 +53,7 @@ switch (state) {
 		if (hAxis == 0) {
 			vx = approach(vx, 0, runDecel);
 			image_speed = 0;
+			image_index = 0;
 		} else {
 			vx = approach(vx, crouchSpeed*sign(hAxis), runAccel)
 			image_xscale = hAxis
