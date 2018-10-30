@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description 
 
 outline_start(1,c_white)
 sprite_index = sprites[state]

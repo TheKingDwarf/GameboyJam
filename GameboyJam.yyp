@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "1b803d9a-9fe0-41f0-aacb-7e7bd38bfd90",
+            "Value": {
+                "id": "a55f6d49-6cc9-4d1e-91dc-4ecdf9a1ff88",
+                "resourcePath": "scripts\\__initEnums__\\__initEnums__.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "26e67ef1-c435-484b-934d-42b3b05e4a77",
             "Value": {
                 "id": "7c72762c-ff02-452e-b539-466b140f8ae9",
@@ -140,6 +148,14 @@
                 "id": "0fc40db6-9b31-41bf-83ce-fb86b21bbdda",
                 "resourcePath": "scripts\\ds_list_random\\ds_list_random.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "38c40fce-d7ac-4b96-ab89-06084007252b",
+            "Value": {
+                "id": "98052604-3f09-46e1-828a-1dac2aece3ad",
+                "resourcePath": "objects\\parDamage\\parDamage.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -227,6 +243,14 @@
             "Value": {
                 "id": "c8dd0f67-ddfa-4831-a663-64b67689d742",
                 "resourcePath": "scripts\\stick_to_angle\\stick_to_angle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6a0a9d61-ddfe-48d8-8179-22a8f572f1f1",
+            "Value": {
+                "id": "04d71576-c3bf-4503-b0fb-316b01d3eb04",
+                "resourcePath": "scripts\\setViewportSize\\setViewportSize.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -463,6 +487,14 @@
             }
         },
         {
+            "Key": "dbfa6d46-b407-42e6-8620-c79b012e1271",
+            "Value": {
+                "id": "3d993493-9aa6-4861-867d-9e1501a3722f",
+                "resourcePath": "objects\\parEntitiy\\parEntitiy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dea6b429-3982-4a17-bbc5-5bbc826d9c94",
             "Value": {
                 "id": "5d3f94f6-ce1b-4450-b1b7-95c8eba58b52",
@@ -590,7 +622,9 @@
         "b545f798-3391-409f-bf1a-819032e8aa95",
         "028a5c78-f2cd-4144-bfe2-19e227344076",
         "d3de394c-79c0-4c01-a27b-cbd4adbed761",
-        "fe53928b-b172-47df-9f24-ae3a037a8aa4"
+        "fe53928b-b172-47df-9f24-ae3a037a8aa4",
+        "6a0a9d61-ddfe-48d8-8179-22a8f572f1f1",
+        "1b803d9a-9fe0-41f0-aacb-7e7bd38bfd90"
     ],
     "tutorial": ""
 }

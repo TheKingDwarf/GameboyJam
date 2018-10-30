@@ -33,7 +33,7 @@ void main()
 		if (outline) break;
     }
     
-    if (outline) gl_FragColor = vec4(oColor.r, oColor.g, oColor.b, 1.0);
+    if (outline) gl_FragColor = vec4(0.97, 0.91, 0.78, 1.0);
 }
 
 

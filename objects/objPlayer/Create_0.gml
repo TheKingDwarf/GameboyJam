@@ -1,12 +1,14 @@
 /// @description 
 outline_init();
 enum PS {
+	dead,
 	run,
 	jump,
 	crouch,
 	stunned,
 	attack
 }
+
 
 state = PS.run;
 
@@ -45,4 +47,9 @@ hp = 3;
 weapon = 0;
 immuneTime = 15;
 jumped = false;
-gunAngle = 2;
+gunAngle = 0;
+maxAmmo = 6;
+ammo = maxAmmo;
+reloadSpeed = 10;
+spread = 20;
+pelletAmount = 6;

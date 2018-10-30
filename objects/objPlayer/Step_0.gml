@@ -16,7 +16,7 @@ switch (state) {
 		}
 		
 		
-		if (vAxis == -1) {
+		if (vAxis == -1) and (!instance_place(x, y-1, objSolid)){
 			state = PS.jump;
 			vy = -jumpSpeed;	
 		}
@@ -72,6 +72,27 @@ if (jumpReleased) {
 	jumped = false;
 }
 
+if (but3) {
+	if (ammo > 0) {
+		switch (state) {
+			case PS.run:
+				for (var i = 0; i < pelletAmount; i++) {
+					var thisSpread = irandom_range(-spread, spread);
+					
+					
+				}
+				break;
+			case PS.jump:
+			
+				break;
+			case PS.crouch:
+			
+				break;
+		}
+	} else {
+		//reload timer	
+	}
+}
 //////
 for (var i = 0; i < abs(vx); i++) {
 	if (!place_meeting(x+sign(vx), y, objSolid)) {

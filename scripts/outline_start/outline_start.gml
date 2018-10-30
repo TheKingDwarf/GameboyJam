@@ -21,7 +21,7 @@ shader_set_uniform_f(uni_thick, argument[0]);
 shader_set_uniform_f(uni_color, color_get_red(argument[1])/255, color_get_green(argument[1])/255, color_get_blue(argument[1])/255);
 
 var acc;
-if (argument_count<=3) acc = 16;
+if (argument_count<=3) acc = 4;
 else acc = argument[3];
 
 shader_set_uniform_f(uni_acc, acc);
