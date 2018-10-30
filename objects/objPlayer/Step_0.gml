@@ -72,23 +72,38 @@ if (jumpReleased) {
 	jumped = false;
 }
 
-if (but3) {
+if (but3 and alarm[1] <= 0) {
 	if (ammo > 0) {
 		switch (state) {
 			case PS.run:
 				for (var i = 0; i < pelletAmount; i++) {
-					var thisSpread = irandom_range(-spread, spread);
-					
-					
+					var thisSpread = irandom_range(-spread, spread);//randomize the spread amount
+					var barrelPosX = lengthdir_x(6, gunAngle + (90 * (1 - image_xscale)))//compute the x offset to get bullets coming out of the barrel
+					var bullet = instance_create_layer(x + barrelPosX, y, layer, objBullet);//create the inst
+					bullet.direction = thisSpread + (90 * (1 - image_xscale));//set the vars
+					bullet.parent = id;
 				}
 				break;
 			case PS.jump:
-			
+				for (var i = 0; i < pelletAmount; i++) {
+					var thisSpread = irandom_range(-fallSpread, fallSpread);//randomize the spread amount
+					var barrelPosX = lengthdir_x(6, gunAngle + (90 * (1 - image_xscale)))//compute the x offset to get bullets coming out of the barrel
+					var bullet = instance_create_layer(x + barrelPosX, y, layer, objBullet);//create the inst
+					bullet.direction = thisSpread + (90 * (1 - image_xscale));//set the vars
+					bullet.parent = id;
+				}
 				break;
 			case PS.crouch:
-			
+				for (var i = 0; i < pelletAmount; i++) {
+					var thisSpread = irandom_range(-crouchSpread, crouchSpread);//randomize the spread amount
+					var barrelPosX = lengthdir_x(6, gunAngle + (90 * (1 - image_xscale)))//compute the x offset to get bullets coming out of the barrel
+					var bullet = instance_create_layer(x + barrelPosX, y, layer, objBullet);//create the inst
+					bullet.direction = thisSpread + (90 * (1 - image_xscale));//set the vars
+					bullet.parent = id;
+				}
 				break;
 		}
+		alarm[1] = timeBetweenShots;
 	} else {
 		//reload timer	
 	}
