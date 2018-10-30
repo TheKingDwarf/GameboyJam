@@ -1,14 +1,5 @@
 /// @description 
 outline_init();
-enum PS {
-	dead,
-	run,
-	jump,
-	crouch,
-	stunned,
-	attack
-}
-
 
 state = PS.run;
 

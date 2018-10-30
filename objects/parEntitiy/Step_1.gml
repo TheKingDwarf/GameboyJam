@@ -9,5 +9,5 @@ if (dInst) {
 }
 
 if (hp <= 0) {
-	state = 	
+	state = GS.dead;
 }
