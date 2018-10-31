@@ -1,0 +1,2 @@
+/// @description
+ammo = maxAmmo;

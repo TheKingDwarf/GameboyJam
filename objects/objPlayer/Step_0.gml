@@ -72,7 +72,7 @@ if (jumpReleased) {
 	jumped = false;
 }
 
-if (but3 and alarm[1] <= 0) {
+if (but3 and (alarm[1] <= 0) and (alarm[2] <= 0)) {
 	if (ammo > 0) {
 		switch (state) {
 			case PS.run:
@@ -103,9 +103,11 @@ if (but3 and alarm[1] <= 0) {
 				}
 				break;
 		}
+		ammo--;
 		alarm[1] = timeBetweenShots;
 	} else {
 		//reload timer	
+		alarm[2] = reloadSpeed;
 	}
 }
 //////
