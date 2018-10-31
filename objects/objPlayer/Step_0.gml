@@ -1,7 +1,7 @@
 /// @description 
 mask_index = sprPlayerRun;
 getInput();
-
+var pitchRange = .05;
 var onGround = instance_place(x, y+1, objSolid);
 switch (state) {
 	case PS.run:
@@ -18,7 +18,10 @@ switch (state) {
 		
 		if (vAxis == -1) and (!instance_place(x, y-1, objSolid)){
 			state = PS.jump;
-			vy = -jumpSpeed;	
+			vy = -jumpSpeed;
+			//play jump sound
+			audio_sound_pitch(sndJump,random_range(1-pitchRange,1+pitchRange));
+			audio_play_sound(sndJump, 5, 0);
 		}
 		if (!onGround) {
 			state = PS.jump;
@@ -74,6 +77,11 @@ if (jumpReleased) {
 
 if (but3 and (alarm[1] <= 0) and (alarm[2] <= 0)) {
 	if (ammo > 0) {
+		//play sounds
+		audio_sound_pitch(sndShoot,random_range(1-pitchRange,1+pitchRange));
+		audio_play_sound(sndShoot, 5, 0);
+		
+		//create bullets
 		switch (state) {
 			case PS.run:
 				for (var i = 0; i < pelletAmount; i++) {
@@ -107,8 +115,21 @@ if (but3 and (alarm[1] <= 0) and (alarm[2] <= 0)) {
 		alarm[1] = timeBetweenShots;
 	} else {
 		//reload timer	
-		alarm[2] = reloadSpeed;
+		audio_play_sound(sndReload, 6, 0);
+		alarm[2] = reloadSpeed*1.5;
 	}
+}
+if (but2 and (alarm[2] <= 0) and ammo < maxAmmo) {
+	audio_play_sound(sndReload, 6, 0);
+	alarm[2] = reloadSpeed;
+}
+if ((image_index >= 1 and image_index < 2) or (image_index > 3)) and stepped = false {
+	audio_sound_pitch(currentFootstepSound, random_range(1-pitchRange, 1+pitchRange));
+	audio_sound_gain(currentFootstepSound, 1/state, 0)
+	audio_play_sound(currentFootstepSound, 10, false)
+	stepped = true;
+} else {
+	stepped = false;	
 }
 //////
 for (var i = 0; i < abs(vx); i++) {

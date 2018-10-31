@@ -41,9 +41,13 @@ jumped = false;
 gunAngle = 0;
 maxAmmo = 6;
 ammo = maxAmmo;
-reloadSpeed = 10;
+reloadSpeed = 12;
 timeBetweenShots = 10;
 spread = 10;
 fallSpread = 20;
 crouchSpread = 5;
 pelletAmount = 6;
+
+//sound stuff
+stepped = false;//boolean whether or not we have stopped, prevents playing step sound too much
+currentFootstepSound = sndCrunch1;
