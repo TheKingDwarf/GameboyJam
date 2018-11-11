@@ -24,16 +24,16 @@ void main()
     d = min(d,dist4);
     
     if(d == dist1) {
-        gl_FragColor = vec4(col1,  (v_vColour * texture2D( gm_BaseTexture, v_vTexcoord )).a);
+        gl_FragColor = vec4(col1,  texture2D( gm_BaseTexture, v_vTexcoord ).a);
     }
     else if(d == dist2) {
-        gl_FragColor = vec4(col2,  (v_vColour * texture2D( gm_BaseTexture, v_vTexcoord )).a);
+        gl_FragColor = vec4(col2,  texture2D( gm_BaseTexture, v_vTexcoord ).a);
     }
     else if(d == dist3) {
-        gl_FragColor = vec4(col3,  (v_vColour * texture2D( gm_BaseTexture, v_vTexcoord )).a);
+        gl_FragColor = vec4(col3,  texture2D( gm_BaseTexture, v_vTexcoord ).a);
     }
     else if(d == dist4) {
-        gl_FragColor = vec4(col4,  (v_vColour * texture2D( gm_BaseTexture, v_vTexcoord )).a);
+        gl_FragColor = vec4(col4,  texture2D( gm_BaseTexture, v_vTexcoord ).a);
     }
     
 }

@@ -4,6 +4,10 @@ getInput();
 var pitchRange = .05;
 var onGround = instance_place(x, y+1, objSolid);
 switch (state) {
+	case PS.dead:
+		//play death animation
+		//set timer to respawn
+		break;
 	case PS.run:
 		if (hAxis == 0) {
 			vx = approach(vx, 0, runDecel);
@@ -78,7 +82,7 @@ if (jumpReleased) {
 if (but3 and (alarm[1] <= 0) and (alarm[2] <= 0)) {
 	if (ammo > 0) {
 		//play sounds
-		audio_sound_pitch(sndShoot,random_range(1-pitchRange,1+pitchRange));
+		audio_sound_pitch(sndShoot,random_range(.8-pitchRange,.8+pitchRange));
 		audio_play_sound(sndShoot, 5, 0);
 		
 		//create bullets
